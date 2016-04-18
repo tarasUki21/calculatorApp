@@ -17,7 +17,7 @@ Updated as often as I get ideas.
     More uncommon functions. (scientific calculator clone)
 ####Graphing - Page
     Graph your function. The input will be a function with x y to graph. 
-####Measurement convertion - Page
-    Convert diffrent units to others.
+####Measurement conversion - Page
+    Convert different units to others.
 
 
