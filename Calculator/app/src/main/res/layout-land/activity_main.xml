@@ -29,12 +29,10 @@
         android:layout_height="wrap_content"
         android:text="1"
         android:id="@+id/button1"
-        android:layout_marginTop="101dp"
+        android:onClick="genButtonPress"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="genButtonPress"
-        />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -184,9 +182,10 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Answer"
         android:id="@+id/textView2"
-        android:layout_marginTop="44dp"
-        android:layout_below="@+id/button10"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignBottom="@+id/button13"
+        android:layout_toRightOf="@+id/button13"
+        android:layout_toEndOf="@+id/button13"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp" />
 
 </RelativeLayout>

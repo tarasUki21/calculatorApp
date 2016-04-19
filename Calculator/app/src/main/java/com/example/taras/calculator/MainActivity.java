@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     String operation = "";
     double product = 0;
     boolean toggle = false; //switch between populating operandA(false) and operandB(true)
+    String input = "";
+    String history = "";
 
     public void firstInput() {
         if (etValue.getText().equals("Input Required")) { // first input
@@ -44,25 +46,25 @@ public class MainActivity extends AppCompatActivity {
 
     public void populate() { //populates the two variables for later calculations
         if (!toggle) {
-            operandA = Double.parseDouble(etValue.getText().toString());
+            operandA = Double.parseDouble(input);
         } else {
-            operandB = Double.parseDouble(etValue.getText().toString());
+            operandB = Double.parseDouble(input);
         }
     }
 
-    public void genButtonPress(View v) {//number button press
+    public void genButtonPress(View v) {
         firstInput();
+        input = input + ((Button) v).getText();
         etValue.append(((Button) v).getText());
         populate();
 
     }
     //TODO: make multiple operations possible with one = press eg.(5+6+3=14)
-    //TODO: have history for equations
-    //TODO: make everything display in top bar
     //TODO: delete button
     public void opButtonPress(View v) {//operation button
         operation = ((Button) v).getText().toString();
-        etValue.setText("");
+        etValue.append(" " + operation + " ");
+        input = "";
         toggle = true;
 
     }
@@ -70,18 +72,20 @@ public class MainActivity extends AppCompatActivity {
     public void equButtonPress(View v) {
         if (operation.equals("+")) {
             product = operandA + operandB;
-            answerVal.setText(Double.toString(product));
+            answerVal.setText(etValue.getText() + " = " + Double.toString(product));
         } else if (operation.equals("-")) {
             product = operandA - operandB;
-            answerVal.setText(Double.toString(product));
+            answerVal.setText(etValue.getText() + " = " + Double.toString(product));
         } else if (operation.equals("*")) {
             product = operandA * operandB;
-            answerVal.setText(Double.toString(product));
+            answerVal.setText(etValue.getText() + " = " + Double.toString(product));
         } else if (operation.equals("/")) {
             product = operandA / operandB;
-            answerVal.setText(Double.toString(product));
+            answerVal.setText(etValue.getText() + " = " + Double.toString(product));
         }
+        history = history + answerVal.getText().toString();
         etValue.setText("");
+        input = "";
         toggle = false;
     }
 }
