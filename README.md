@@ -22,4 +22,5 @@ Updated as often as I get ideas.
 ####Matrix calculations - Page
     Add a set of matrixes together. (expand into multiplication, subtraction,
     division, invertion, etc.)
-
+####Truth tables - Page
+    Convert truth tables to k-maps and to expressions.
