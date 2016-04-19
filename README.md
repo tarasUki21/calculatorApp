@@ -19,5 +19,7 @@ Updated as often as I get ideas.
     Graph your function. The input will be a function with x y to graph. 
 ####Measurement conversion - Page
     Convert different units to others.
-
+####Matrix calculations - Page
+    Add a set of matrixes together. (expand into multiplication, subtraction,
+    division, invertion, etc.)
 
