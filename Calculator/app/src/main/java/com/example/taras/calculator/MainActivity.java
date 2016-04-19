@@ -59,8 +59,19 @@ public class MainActivity extends AppCompatActivity {
         populate();
 
     }
-    //TODO: make multiple operations possible with one = press eg.(5+6+3=14)
-    //TODO: delete button
+    public void delButtonPress(View v){
+        if(etValue.length() > 0 && input.length() > 1) {
+            input = input.substring(0, input.length() - 1);
+            populate();
+            etValue.setText(etValue.getText().subSequence(0, etValue.length() - 1));
+        }
+        else if(etValue.length() == 1 && input.length() == 1){
+            input = "";
+            populate();
+            etValue.setText("");
+        }
+    }
+
     public void opButtonPress(View v) {//operation button
         operation = ((Button) v).getText().toString();
         etValue.append(" " + operation + " ");
