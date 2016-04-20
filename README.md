@@ -24,3 +24,6 @@ Updated as often as I get ideas.
     division, invertion, etc.)
 ####Truth tables - Page
     Convert truth tables to k-maps and to expressions.
+####Algebraic Expressions - Page
+    Have the calculator try to solve algebraic equations.
+
